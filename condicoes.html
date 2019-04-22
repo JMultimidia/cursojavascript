@@ -1,0 +1,71 @@
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <title>Curso JavaScript</title>
+</head>
+
+<body>
+    <script>
+
+        function retornaSexo(sexo) {
+            //M ou F
+            //Masculino ou Feminino
+
+            /* //If e Else
+            if (sexo === 'M') {
+                return 'Masculino';
+            } else if (sexo === 'F') {
+                return 'Feminino';
+            } else {
+                return 'Outro';
+            }
+            */
+            //Switch
+            switch (sexo) {
+
+                case 'M':
+                    return 'Masculino';
+                case 'F':
+                    return 'Feminino';
+                default:
+                    return 'Outro'
+
+            }
+        }
+
+        function retornaSexo2(sexo) {
+            var masculino;
+            if (sexo === 'M') {
+                masculino = true;
+            } else {
+                masculino = false;
+            }
+            return masculino;
+        }
+
+        //Mesma função acima, porém reduzida
+        function retornaSexo3(sexo) {
+            var masculino = sexo === 'M'; //Resultado já retorna true ou falso
+       
+            return masculino;
+        }
+
+        var resultado = retornaSexo('F');
+        console.log(resultado);
+
+        var resultado2 = retornaSexo2('M');
+        console.log(resultado2);
+      
+        var resultado3 = retornaSexo3('F');
+        console.log(resultado3);
+
+        //Condição Ternária (Apenas para uma condição)
+        var sexo = 'M';
+
+        var retorno = (sexo === 'M') ? 'Masculino' : 'Feminino';
+        console.log(retorno);
+    </script>
+</body>
+
+</html>
